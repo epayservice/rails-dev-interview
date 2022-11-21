@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Payment App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <h1>Payment App</h1>
+    <p>
+      <%= link_to "My wallets", wallets_path %> |
+      <%= link_to "New payment", new_payment_path %> |
+      <%= link_to "History", payments_path %>
+    </p>
+    <p>
+      <%= yield %>
+    </p>
+  </body>
+</html>
